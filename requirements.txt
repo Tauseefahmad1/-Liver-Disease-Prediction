@@ -1,0 +1,53 @@
+# import 'Pandas'
+import pandas as pd
+
+# import 'Numpy'
+import numpy as np
+
+# import subpackage of Matplotlib
+import matplotlib.pyplot as plt
+
+# import 'Seaborn'
+import seaborn as sns
+
+# to suppress warnings
+from warnings import filterwarnings
+filterwarnings('ignore')
+
+# display all columns of the dataframe
+pd.options.display.max_columns = None
+
+# display all rows of the dataframe
+pd.options.display.max_rows = None
+
+# to display the float values upto 6 decimal places
+pd.options.display.float_format = '{:.6f}'.format
+
+# import train-test split
+from sklearn.model_selection import train_test_split
+
+# import various functions from statsmodel to perform linear regression
+import statsmodels
+import statsmodels.api as sm
+import statsmodels.stats.api as sms
+from statsmodels.compat import lzip
+from statsmodels.stats.outliers_influence import variance_inflation_factor #VIF for multicollinarity
+from statsmodels.graphics.gofplots import qqplot # to check for normality
+from statsmodels.stats.anova import anova_lm
+from statsmodels.formula.api import ols # ordinary least square method
+from statsmodels.tools.eval_measures import rmse # root mean square error
+
+# import various functions from scipy
+from scipy import stats
+from scipy.stats import shapiro
+
+# 'metrics' from sklearn is used for evaluating the model performance
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
+import plotly.express as pe
+
+# import machine learning models for model fitting
+from sklearn .model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+#from sklearn import SVM
+from sklearn.tree import DecisionTreeClassifier
